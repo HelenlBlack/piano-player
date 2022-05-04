@@ -6,26 +6,32 @@ keys.forEach(function(key){
 })
 
 // Write named functions that change the color of the keys below
-const keyPlay = function(key) {
+function keyPlay(key) {
   console.log('in keyPlay key =', key);
   key.target.style.backgroundColor = '#1fdec5';
 }
 
-const keyReturn = function(key) {
+function keyReturn(key) {
   console.log('in keyReturn key =', key);
   key.target.style.backgroundColor = '';
 }
 
 // Write a named function with event handler properties
-let eventAssignment = function(note) {
+/*function eventAssignment(note) {
   console.log('in eventAssignment, note =', note);
-  note.addEventListener('mousedown', keyPlay(note));
-  note.addEventListener ('mouseup', keyReturn(note)); 
-}
+  note.addEventListener('mousedown', keyPlay);
+  note.addEventListener('mouseup', keyReturn);
+} */
 
 // Write a loop that runs the array elements through the function
 console.log('About to assign events to the notes array');
-notes.foreach(eventAssignment);
+notes.foreach(function(key) {
+  key.addEventListener('mousedown', keyPlay(key));
+  key.addEventListener('mouseup', keyReturn(key));
+});
+
+let testKey = document.getElementById('c-key');
+console.log('manual test playing low C', keyPlay(testKey));
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
