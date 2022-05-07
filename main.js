@@ -5,33 +5,48 @@ keys.forEach(function(key){
   notes.push(document.getElementById(key));
 })
 
+let ckey = document.getElementById('c-key');
+let cskey = document.getElementById('c-sharp-key');
+let dkey = document.getElementById('d-key');
+let dskey = document.getElementById('d-sharp-key');
+let ekey = document.getElementById('e-key');
+let fkey = document.getElementById('f-key');
+let fskey = document.getElementById('f-sharp-key');
+let gkey = document.getElementById('g-key');
+let gskey = document.getElementById('g-sharp-key');
+let akey = document.getElementById('a-key');
+let askey = document.getElementById('a-sharp-key');
+let bkey = document.getElementById('b-key');
+let hckey = document.getElementById('high-c-key');
+
+const pianoKeys = [ckey, cskey, dkey, dskey, ekey, fkey, fskey, gkey, gskey, akey, askey, bkey, hckey];
+
+ckey.addEventListener('click', keyPlay);
+// dkey.onmouseover = 
+dkey.onclick = dkey.style.backgroundColor = '#bacbac';
 // Write named functions that change the color of the keys below
-function keyPlay(key) {
-  console.log('in keyPlay key =', key);
-  key.target.style.backgroundColor = '#1fdec5';
+const keyPlay = function() {
+  ckey.style.backgroundColor = '#1fdec5';
 }
 
-function keyReturn(key) {
-  console.log('in keyReturn key =', key);
-  key.target.style.backgroundColor = '';
+const keyReturn = function(key) {
+  key.style.backgroundColor = '';
 }
 
 // Write a named function with event handler properties
-/*function eventAssignment(note) {
-  console.log('in eventAssignment, note =', note);
-  note.addEventListener('mousedown', keyPlay);
-  note.addEventListener('mouseup', keyReturn);
-} */
+let eventAssignment = function(note) {
+  note.onmousedown = function() {
+    keyPlay(note);
+  }
+  note.onmouseup = function() {
+    keyReturn(note);
+  }
+}
 
 // Write a loop that runs the array elements through the function
-console.log('About to assign events to the notes array');
-notes.foreach(function(key) {
-  key.addEventListener('mousedown', keyPlay(key));
-  key.addEventListener('mouseup', keyReturn(key));
+pianoKeys.foreach(function(key){
+  eventAssignment(key);
 });
-
-let testKey = document.getElementById('c-key');
-console.log('manual test playing low C', keyPlay(testKey));
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
