@@ -56,17 +56,17 @@ nextOne.onclick = function() {
   nextTwo.hidden = false;
   nextOne.hidden = true;
    document.getElementById('word-one').innerHTML = 'HAP-';
-  document.getElementById('letter-note-one').innerHTML = 'G';
+  document.getElementById('letter-note-one').innerHTML = 'C';
   document.getElementById('word-two').innerHTML = 'PY';
-  document.getElementById('letter-note-two').innerHTML = 'G';
+  document.getElementById('letter-note-two').innerHTML = 'C';
   document.getElementById('word-three').innerHTML = 'BIRTH-';
-  document.getElementById('letter-note-three').innerHTML = 'A';
+  document.getElementById('letter-note-three').innerHTML = 'D';
   document.getElementById('word-four').innerHTML = 'DAY';
-  document.getElementById('letter-note-four').innerHTML = 'G';
+  document.getElementById('letter-note-four').innerHTML = 'C';
   document.getElementById('word-five').innerHTML = 'TO';
-  document.getElementById('letter-note-five').innerHTML = 'D';
+  document.getElementById('letter-note-five').innerHTML = 'G';
   document.getElementById('word-six').innerHTML = 'YOU!';
-  document.getElementById('letter-note-six').innerHTML = 'C';
+  document.getElementById('letter-note-six').innerHTML = 'F';
 }
 
 // Write anonymous event handler property and function for the second progress button
@@ -75,17 +75,17 @@ nextTwo.onclick = function() {
   nextTwo.hidden = true;
   document.getElementById('column-optional').style.display = 'inline-block';
    document.getElementById('word-one').innerHTML = 'HAP-';
-  document.getElementById('letter-note-one').innerHTML = 'G';
+  document.getElementById('letter-note-one').innerHTML = 'C';
   document.getElementById('word-two').innerHTML = 'PY';
-  document.getElementById('letter-note-two').innerHTML = 'G';
+  document.getElementById('letter-note-two').innerHTML = 'C';
   document.getElementById('word-three').innerHTML = 'BIRTH-';
-  document.getElementById('letter-note-three').innerHTML = 'G';
+  document.getElementById('letter-note-three').innerHTML = 'hC';
   document.getElementById('word-four').innerHTML = 'DAY';
-  document.getElementById('letter-note-four').innerHTML = 'E';
+  document.getElementById('letter-note-four').innerHTML = 'A';
   document.getElementById('word-five').innerHTML = 'DEAR';
-  document.getElementById('letter-note-five').innerHTML = 'C';
+  document.getElementById('letter-note-five').innerHTML = 'F';
   document.getElementById('word-six').innerHTML = 'FRI';
-  document.getElementById('letter-note-six').innerHTML = 'B';
+  document.getElementById('letter-note-six').innerHTML = 'E';
 }
 
 // Write anonymous event handler property and function for the third progress button
@@ -94,17 +94,17 @@ nextThree.onclick = function() {
   nextThree.hidden = true;
   document.getElementById('column-optional').style.display = 'none';
    document.getElementById('word-one').innerHTML = 'HAP-';
-  document.getElementById('letter-note-one').innerHTML = 'F';
+  document.getElementById('letter-note-one').innerHTML = 'As';
   document.getElementById('word-two').innerHTML = 'PY';
-  document.getElementById('letter-note-two').innerHTML = 'F';
+  document.getElementById('letter-note-two').innerHTML = 'As';
   document.getElementById('word-three').innerHTML = 'BIRTH-';
-  document.getElementById('letter-note-three').innerHTML = 'E';
+  document.getElementById('letter-note-three').innerHTML = 'A';
   document.getElementById('word-four').innerHTML = 'DAY';
-  document.getElementById('letter-note-four').innerHTML = 'C';
+  document.getElementById('letter-note-four').innerHTML = 'F';
   document.getElementById('word-five').innerHTML = 'TO';
-  document.getElementById('letter-note-five').innerHTML = 'D';
+  document.getElementById('letter-note-five').innerHTML = 'G';
   document.getElementById('word-six').innerHTML = 'YOU!';
-  document.getElementById('letter-note-six').innerHTML = 'C';
+  document.getElementById('letter-note-six').innerHTML = 'F';
 }
 
 
@@ -113,15 +113,15 @@ startOver.onclick = function() {
   nextOne.hidden = false;
   startOver.hidden = true;
    document.getElementById('word-one').innerHTML = 'HAP-';
-  document.getElementById('letter-note-one').innerHTML = 'G';
+  document.getElementById('letter-note-one').innerHTML = 'C';
   document.getElementById('word-two').innerHTML = 'PY';
-  document.getElementById('letter-note-two').innerHTML = 'G';
+  document.getElementById('letter-note-two').innerHTML = 'C';
   document.getElementById('word-three').innerHTML = 'BIRTH-';
-  document.getElementById('letter-note-three').innerHTML = 'A';
+  document.getElementById('letter-note-three').innerHTML = 'D';
   document.getElementById('word-four').innerHTML = 'DAY';
-  document.getElementById('letter-note-four').innerHTML = 'G';
+  document.getElementById('letter-note-four').innerHTML = 'C';
   document.getElementById('word-five').innerHTML = 'TO';
-  document.getElementById('letter-note-five').innerHTML = 'C';
+  document.getElementById('letter-note-five').innerHTML = 'F';
   document.getElementById('word-six').innerHTML = 'YOU!';
-  document.getElementById('letter-note-six').innerHTML = 'B';
+  document.getElementById('letter-note-six').innerHTML = 'E';
 }
