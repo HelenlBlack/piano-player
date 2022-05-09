@@ -2,6 +2,8 @@
 const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
 const notes = [];
 
+var audio =  new Audio('');
+
 var i;
 
 keys.forEach(function(key){
@@ -14,12 +16,11 @@ console.log('notes is:', notes);
 // Write named functions that change the color of the keys below
 
 function keyPlay(){
-  this.style.backgroundColor = 'green';
+  this.style.backgroundColor = 'gray';
   let note = this.dataset.key;
-  console.log('this.dataset.key', this.dataset.key);
-  let audiofile = './resources/' + note + '.mp3';
-  var audio = new Audio(audiofile);
-  console.log('audio.src', audio.src);
+  let audioel = document.getElementById(note);
+  let audiosrc = audioel.getAttribute('src');
+  audio.src = audiosrc;
   audio.play();
 }
 
