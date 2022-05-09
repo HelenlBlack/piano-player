@@ -19,17 +19,8 @@ function keyPlay(){
   this.style.backgroundColor = 'green';
   let note = this.dataset.key;
   console.log('this.dataset.key', this.dataset.key);
-  //const notetoplay = document.getElementById(note);
-  //const audiofile = notetoplay.getAttribute('src');
-  //console.log('document.getElementById(note)', document.getElementById(note));
-  //document.getElementById(note).play();
   let audiofile = './resources/' + note + '.mp3';
-  //audio.setAttribute('src', audiofile);
-  //console.log('audiofile', audiofile);
-  //const filetoplay = audiofile.getAttribute('src');
-  //console.log('filetoplay', filetoplay);
   var audio = new Audio(audiofile);
-  //audio.src = audiofile;
   console.log('audio.src', audio.src);
   audio.play();
 }
