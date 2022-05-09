@@ -1,52 +1,32 @@
 // The keys and notes variables store the piano keys
 const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
 const notes = [];
+var i;
 keys.forEach(function(key){
   notes.push(document.getElementById(key));
 })
+console.log('notes is:', notes);
 
-let ckey = document.getElementById('c-key');
-let cskey = document.getElementById('c-sharp-key');
-let dkey = document.getElementById('d-key');
-let dskey = document.getElementById('d-sharp-key');
-let ekey = document.getElementById('e-key');
-let fkey = document.getElementById('f-key');
-let fskey = document.getElementById('f-sharp-key');
-let gkey = document.getElementById('g-key');
-let gskey = document.getElementById('g-sharp-key');
-let akey = document.getElementById('a-key');
-let askey = document.getElementById('a-sharp-key');
-let bkey = document.getElementById('b-key');
-let hckey = document.getElementById('high-c-key');
-
-const pianoKeys = [ckey, cskey, dkey, dskey, ekey, fkey, fskey, gkey, gskey, akey, askey, bkey, hckey];
-
-ckey.addEventListener('click', keyPlay);
-// dkey.onmouseover = 
-dkey.onclick = dkey.style.backgroundColor = '#bacbac';
 // Write named functions that change the color of the keys below
-const keyPlay = function() {
-  ckey.style.backgroundColor = '#1fdec5';
+
+function keyPlay(){
+  this.style.backgroundColor = 'green';
 }
 
-const keyReturn = function(key) {
-  key.style.backgroundColor = '';
+function keyReturn(){
+  this.style.backgroundColor = '';
 }
 
 // Write a named function with event handler properties
-let eventAssignment = function(note) {
-  note.onmousedown = function() {
-    keyPlay(note);
-  }
-  note.onmouseup = function() {
-    keyReturn(note);
-  }
-}
+
 
 // Write a loop that runs the array elements through the function
-pianoKeys.foreach(function(key){
-  eventAssignment(key);
-});
+for (i=0; i < notes.length; i++) {
+  notes[i].addEventListener('mousedown', keyPlay);
+  notes[i].addEventListener('mouseup', keyReturn);
+}
+
+//notes.forEach(e => {listenerAssignment(e);});
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
